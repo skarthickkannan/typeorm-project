@@ -19,7 +19,7 @@ import { UserContext } from "../UserContext";
 @Resolver()
 export class PostResolver {
   @Query(() => String)
-  @UseMiddleware(isAuth)
+  // @UseMiddleware(isAuth)
   async postHelloword(): Promise<string> {
     return "hello";
   }

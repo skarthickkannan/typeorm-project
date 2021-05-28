@@ -26,7 +26,7 @@ export class UserResolver {
   @Query(() => String)
   @UseMiddleware(isAuth)
   async postHelloword(): Promise<string> {
-    return "hello";
+    return "post";
   }
 
   @Mutation(() => UserResponse)

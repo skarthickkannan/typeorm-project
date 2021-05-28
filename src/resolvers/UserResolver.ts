@@ -34,6 +34,7 @@ export class UserResolver {
     @Arg("data") { username, email, password, createdAt }: RegisterInput
   ): Promise<UserResponse> {
     let user = await User.findOne({ email });
+
     if (user) {
       return {
         error: [{ field: "User", message: "Email already taken" }],
